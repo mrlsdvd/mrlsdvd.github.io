@@ -18,5 +18,5 @@ $().ready(function() {
 
 
 function setMainContent(navName) {
-    $('#main-content').load('/assets/content/' + navName +'.html');
+    $('#main-content').load('/assets/html/' + navName +'.html');
 }
