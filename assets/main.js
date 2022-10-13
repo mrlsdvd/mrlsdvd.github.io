@@ -13,5 +13,5 @@ $().ready(function() {
 
 
 function updateContent(nav_name) {
-    $('#main-content').load('/assets/' + nav_name +'.html');
+    $('#main-content').load('/assets/' + nav_name.split('-').pop() +'.html');
 }
