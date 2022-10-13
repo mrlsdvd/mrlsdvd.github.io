@@ -2,7 +2,7 @@ $().ready(function() {
    /**
     * Begin with about content as default
     */
-    updateContent('about')
+    setMainContent('about')
     
    /**
     * Add listeners to the beginning of the page creation 
@@ -11,12 +11,12 @@ $().ready(function() {
     $(".nav-link").click(function() {
         $(".nav-link").removeClass('active');
         $(this).addClass('active');
-        updateContent($(this).attr('id').split('-').pop())
+        setMainContent($(this).attr('id').split('-').pop())
     });
 
 });
 
 
-function updateContent(nav_name) {
-    $('#main-content').load('/assets/' + nav_name +'.html');
+function setMainContent(navName) {
+    $('#main-content').load('/assets/content/' + navName +'.html');
 }
