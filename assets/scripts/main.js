@@ -26,7 +26,7 @@ $().ready(function() {
     $("#search-form").submit(function(e){
         e.preventDefault()
         var pageName = $(".nav-link.active").attr('id').split('-').pop()
-        searchContent($("#search-bar").text(), pageName);
+        searchContent($("#search-bar").val(), pageName);
     });
 
 });
