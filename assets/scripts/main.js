@@ -4,7 +4,7 @@ $().ready(function() {
    /**
     * Begin with about content as default
     */
-    setMainContent('about')
+    setMainContent('about');
     
    /**
     * Add listeners to the beginning of the page creation 
@@ -13,7 +13,13 @@ $().ready(function() {
     $(".nav-link").click(function() {
         $(".nav-link").removeClass('active');
         $(this).addClass('active');
-        setMainContent($(this).attr('id').split('-').pop())
+        setMainContent($(this).attr('id').split('-').pop());
+    });
+
+    // Search listener
+    $("#search-form").submit(function(){
+        var pageName = $(".nav-link .active").attr('id').split('-').pop()
+        searchContent($("#search-bar").text(), pageName);
     });
 
 });
@@ -48,4 +54,8 @@ String.prototype.format = function() {
 function setMainContent(navName) {
     $('#main-content').load('/assets/html/' + navName +'.html');
     window.history.replaceState(null, null, MAIN_URL+navName)
+}
+
+function searchContent(query, navName) {
+    console.log("Searching {0} under page {1}".format(query, navName))
 }
