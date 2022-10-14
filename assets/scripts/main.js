@@ -1,10 +1,16 @@
 MAIN_URL = 'https://mrlsdvd.github.io/'
+SUPPORTED_PAGES = ['about', 'programming', 'outdoors', 'art', 'photography', 'travel', 'albums']
 
 $().ready(function() {
    /**
-    * Begin with about content as default
+    * Begin with desired content as default
     */
-    setMainContent('about');
+    var pageName = window.location.href.split(MAIN_URL)[1].toLowerCase()
+    if (!SUPPORTED_PAGES.includes(pageName)) {pageName = 'about'}
+    setMainContent(pageName);
+    // Make that navigation tab active
+    $(".nav-link").removeClass('active');
+    $("#nav-${pageName}").addClass('active')
     
    /**
     * Add listeners to the beginning of the page creation 
