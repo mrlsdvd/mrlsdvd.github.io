@@ -10,7 +10,7 @@ $().ready(function() {
     setMainContent(pageName);
     // Make that navigation tab active
     $(".nav-link").removeClass('active');
-    $("#nav-${pageName}").addClass('active')
+    $("#nav-"+pageName).addClass('active')
     
    /**
     * Add listeners to the beginning of the page creation 
