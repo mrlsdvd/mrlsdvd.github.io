@@ -25,7 +25,7 @@ $().ready(function() {
     // Search listener
     $("#search-form").submit(function(e){
         e.preventDefault()
-        var pageName = $(".nav-link .active").attr('id').split('-').pop()
+        var pageName = $(".nav-link.active").attr('id').split('-').pop()
         searchContent($("#search-bar").text(), pageName);
     });
 
