@@ -1,3 +1,5 @@
+MAIN_URL = 'https://mrlsdvd.github.io/'
+
 $().ready(function() {
    /**
     * Begin with about content as default
@@ -45,4 +47,5 @@ String.prototype.format = function() {
 
 function setMainContent(navName) {
     $('#main-content').load('/assets/html/' + navName +'.html');
+    window.history.replaceState(null, null, MAIN_URL+navName)
 }
