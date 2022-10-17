@@ -1,0 +1,64 @@
+<div class="photo-gallery-entry-wrapper {orientation}" id="{image-id}">
+<!-- Gallery Photo Entry
+    Requires the following named arguments:
+    - image-id:
+    - image-path:
+    - orientation:
+    - caption:
+    - description:
+    - photo-gallery-tags-html:
+    - photo-modal-tags-htmls
+-->    
+    <a data-toggle="modal" data-target="#photo-gallery-modal-{image-id}">
+        <div class="photo-gallery-entry">
+            <img
+              src="{image-path}"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="{caption}"
+            />
+        </div>
+        <div class="photo-gallery-caption-settings-wrapper">
+            <p class="photo-gallery-caption">{caption}</p>
+            <p class="photo-gallery-settings">{settings}</p>
+        </div>
+        <div class="photo-gallery-tags-wrapper">
+            {photo-gallery-tags}
+        </div>
+    </a>
+<!-- Gallery Photo Entry-->
+
+<!-- Gallery Photo Modal -->
+    <div class="modal fade" id="photo-gallery-modal-{image-id}" tabindex="-1" role="dialog" aria-labelledby="galleryPhotoModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="photo-modal">
+                    <img
+                    src="{image-path}"
+                    class="w-100 shadow-1-strong rounded mb-4"
+                    alt="{caption}"
+                    />
+                </div>
+                <div class="photo-modal-caption-settings-wrapper">
+                    <p class="photo-modal-caption">{caption}</p>
+                    <p class="photo-modal-settings">{settings}</p>
+                </div>
+          </div>
+          <div class="modal-footer">
+            <div class="photo-modal-tags-wrapper">
+                {photo-modal-tags}
+            </div>
+            <div class="photo-modal-description-wrapper">
+                <p class="photo-modal-description">{description}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Gallery Photo Modal -->
+</div>
