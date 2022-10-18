@@ -2,10 +2,10 @@
 	"data": {
 		"images":
 			{
-				"pika1": {"path": "assets/content/photography/imgs/pika1.jpeg"},
-				"pika2": {"path": "assets/content/photography/imgs/pika2.jpeg"},
-				"pika3": {"path": "assets/content/photography/imgs/pika3.jpeg"},
-				"pika4": {"path": "assets/content/photography/imgs/pika4.jpeg"}
+				"pika1": {"path": "./assets/content/photography/imgs/pika1.jpeg"},
+				"pika2": {"path": "./assets/content/photography/imgs/pika2.jpeg"},
+				"pika3": {"path": "./assets/content/photography/imgs/pika3.jpeg"},
+				"pika4": {"path": "./assets/content/photography/imgs/pika4.jpeg"}
 			},
 		"markdown": {"id": {"value": "<markdown>"}}
 	},
