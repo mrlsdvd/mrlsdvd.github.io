@@ -5,6 +5,13 @@ $().ready(function() {
     * Begin with desired content as default
     */
     console.log("Photography page loaded!");
+    // Load photo entry HTML template:
+    var photoTemplate = null;
+    $.get(PHOTO_GALLERY_ENTRY_COMPONENT_PATH, function(data) {
+        photoTemplate = photoTemplate
+    });
+    console.log(photoTemplate)
+
     // Load config data
     $.getJSON("/config.json", function(data) {
         console.log(data.photography);
@@ -22,7 +29,7 @@ $().ready(function() {
 
 });
 
-function constructPhotoEntryHTML(photoInfo, imageInfo) {
+function constructPhotoEntryHTML(photoTemplate, photoInfo, imageInfo) {
     truncatedTagsHTML = constructTagsHTML(photoInfo.tags);
     fullTagsHTML = constructTagsHTML(photoInfo.tags, false);
     templateEntries = {
@@ -35,11 +42,8 @@ function constructPhotoEntryHTML(photoInfo, imageInfo) {
         "photo-gallery-tags-html": truncatedTagsHTML,
         "photo-modal-tags-html": fullTagsHTML
     };
-    // Load HTML template
-    var photoEntry = null;
-    $.get(PHOTO_GALLERY_ENTRY_COMPONENT_PATH, function(photoTemplate) {
-        photoEntry = photoTemplate.format(templateEntries);
-    });
+    
+    photoEntry = photoTemplate.format(templateEntries);
     console.log(photoEntry);
     return photoEntry;
 }
