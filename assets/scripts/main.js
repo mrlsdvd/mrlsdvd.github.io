@@ -82,7 +82,7 @@ function getObjectComparator(objectKey) {
 function constructTagsHTML(tags, truncate=true, maxTags=5) {
     maxTags = tags;
     if (truncate) {
-        maxTags = maxTags.splice(maxTags)
+        maxTags = maxTags.slice(0, maxTags)
     }
     tagsHTML = "";
     maxTags.forEach((tag) => {
