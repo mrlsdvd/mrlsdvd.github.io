@@ -7,7 +7,7 @@ $().ready(function() {
     console.log("Photography page loaded!");
     // Load config data
     $.getJSON("/config.json", function(data) {
-        console.log(obj.photography);
+        console.log(data.photography);
         // Sort objects by date
         let sortedPhotoInfo = data.photography.photos.sort(getObjectComparator('date'));
         console.log(sortedPhotoInfo);
