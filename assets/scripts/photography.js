@@ -31,14 +31,15 @@ function constructPhotoEntryHTML(photoTemplate, photoInfo, imageInfo) {
     truncatedTagsHTML = constructTagsHTML(photoInfo.tags);
     fullTagsHTML = constructTagsHTML(photoInfo.tags, false);
     templateEntries = {
-        "image-id": photoInfo.imageId,
-        "image-path": imageInfo.path,
+        "imageId": photoInfo.imageId,
+        "imagePath": imageInfo.path,
         "orientation": photoInfo.orientation,
         "title": photoInfo.title,
         "caption": photoInfo.caption,
+        "settings": photoInfo.settings,
         "description": photoInfo.description,
-        "photo-gallery-tags-html": truncatedTagsHTML,
-        "photo-modal-tags-html": fullTagsHTML
+        "photoGalleryTags": truncatedTagsHTML,
+        "photoModalTags": fullTagsHTML
     };
     
     photoEntry = photoTemplate.format(templateEntries);
