@@ -30,6 +30,8 @@ $().ready(function() {
 });
 
 function constructPhotoEntryHTML(photoTemplate, photoInfo, imageInfo) {
+    console.log(photoInfo)
+    console.log(photoInfo.tags)
     truncatedTagsHTML = constructTagsHTML(photoInfo.tags);
     fullTagsHTML = constructTagsHTML(photoInfo.tags, false);
     templateEntries = {
