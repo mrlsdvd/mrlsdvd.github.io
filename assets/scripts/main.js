@@ -79,10 +79,10 @@ function getObjectComparator(objectKey) {
     }
 }
 
-function constructTagsHTML(tags, truncate=true, maxTags=5) {
+function constructTagsHTML(tags, truncate=true, numMaxTags=5) {
     maxTags = tags;
     if (truncate) {
-        maxTags = maxTags.slice(0, maxTags)
+        maxTags = maxTags.slice(0, numMaxTags)
     }
     tagsHTML = "";
     maxTags.forEach((tag) => {
