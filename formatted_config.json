@@ -13,6 +13,7 @@
 	"outdoors": {"posts": [{}]},
 	"art": {"works": [{}]},
 	"photography": {
+		"numCols": 4,
 		"portraitSize": [],
 		"landscapeSize": [],
 		"photos": [{

@@ -10,10 +10,24 @@ $().ready(function() {
         $.getJSON("/config.json", function(data) {
             // Sort objects by date
             let sortedPhotoInfo = data.photography.photos.sort(getObjectComparator('date'));
-            sortedPhotoInfo.forEach((photoInfo) => {
+            let numCols = data.photography.numCols;
+            let numPhotos = sortedPhotoInfo.length;
+            let prevRow = null;
+
+            sortedPhotoInfo.forEach((photoInfo, idx) => {
+                if (idx % numCols == 0 || idx == numPhotos-1) {
+                    if (prevRow != null) {
+                        prevRow += "</div>"
+                        $("#photo-gallery").append(prevRow);
+
+                    }
+                    prevRow = `<div class="row">`
+
+                }
                 imageInfo = data.data.images[photoInfo.imageId];
                 entryHTML = constructPhotoEntryHTML(photoTemplate, photoInfo, imageInfo);
-                $("#photo-gallery").append(entryHTML);
+                prevRow += entryHTML;
+                
             });
         });
     });
