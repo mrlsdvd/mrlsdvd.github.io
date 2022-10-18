@@ -15,13 +15,14 @@ $().ready(function() {
             let prevRow = null;
 
             sortedPhotoInfo.forEach((photoInfo, idx) => {
+                console.log(photoInfo)
                 if (idx % numCols == 0 || idx == numPhotos-1) {
                     if (prevRow != null) {
-                        prevRow += "</div>"
+                        prevRow += "</div>";
                         $("#photo-gallery").append(prevRow);
 
                     }
-                    prevRow = `<div class="row">`
+                    prevRow = `<div class="row">`;
 
                 }
                 imageInfo = data.data.images[photoInfo.imageId];
