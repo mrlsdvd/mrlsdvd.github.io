@@ -67,7 +67,7 @@ function searchContent(query, navName) {
     console.log("Searching {0} under page {1}".format(query, navName))
 }
 
-export function getObjectComparator(objectKey) {
+function getObjectComparator(objectKey) {
     return function(a, b) {
         if ( a[objectKey] < b[objectKey] ){
             return -1;
@@ -79,7 +79,7 @@ export function getObjectComparator(objectKey) {
     }
 }
 
-export function constructTagsHTML(tags, truncate=true, maxTags=5) {
+function constructTagsHTML(tags, truncate=true, maxTags=5) {
     maxTags = tags;
     if (truncate) {
         maxTags = maxTags.splice(maxTags)
