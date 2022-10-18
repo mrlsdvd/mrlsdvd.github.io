@@ -38,7 +38,7 @@ $().ready(function() {
 String.prototype.format = function() {
   var args = arguments;
   this.unkeyed_index = 0;
-  return this.replace(/\{(\w*)\}/i, function(match, key) { 
+  return this.replace(/\{(\w*)\}/g, function(match, key) { 
     if (key === '') {
       key = this.unkeyed_index;
       this.unkeyed_index++
