@@ -16,7 +16,7 @@ $().ready(function() {
 
             sortedPhotoInfo.forEach((photoInfo, idx) => {
                 console.log(idx + " " + photoInfo)
-                if (idx % numCols == 0 || idx == numPhotos-1) {
+                if (idx % (numCols+1) == 0 || idx == numPhotos-1) {
                     if (prevRow != null) {
                         prevRow += "</div>";
                         $("#photo-gallery").append(prevRow);
