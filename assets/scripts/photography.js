@@ -13,6 +13,7 @@ $().ready(function() {
         console.log(sortedPhotoInfo);
         sortedPhotoInfo.forEach((photoInfo) => {
             imageInfo = data.data.images[photoInfo.imageId];
+            console.log(imageInfo)
             entryHTML = constructPhotoEntryHTML(photoInfo, imageInfo);
             $("div.gallery.photo-gallery").html(entryHTML);
         });
