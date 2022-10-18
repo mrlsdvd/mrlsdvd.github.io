@@ -66,3 +66,30 @@ function setMainContent(navName) {
 function searchContent(query, navName) {
     console.log("Searching {0} under page {1}".format(query, navName))
 }
+
+export function getObjectComparator(objectKey) {
+    return function(a, b) {
+        if ( a[objectKey] < b[objectKey] ){
+            return -1;
+          }
+          if ( a[objectKey] > b[objectKey] ){
+            return 1;
+          }
+          return 0;
+    }
+}
+
+export function constructTagsHTML(tags, truncate=true, maxTags=5) {
+    maxTags = tags;
+    if (truncate) {
+        maxTags = maxTags.splice(maxTags)
+    }
+    tagsHTML = "";
+    maxTags.forEach((tag) => {
+        tagsHTML += `<span class="badge badge-pill badge-light tag">${tag}</span>`;
+    });
+    if (maxTags.length < tags.length) {
+        tagsHTML += `<span class="badge badge-pill badge-light tag tag-ellipses">...</span>`;
+    }
+    return tagsHTML;
+}
