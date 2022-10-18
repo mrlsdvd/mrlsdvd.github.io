@@ -2,10 +2,10 @@
 	"data": {
 		"images":
 			{
-				"pika1": {"path": "./assets/content/photography/imgs/pika1.jpeg"},
-				"pika2": {"path": "./assets/content/photography/imgs/pika2.jpeg"},
-				"pika3": {"path": "./assets/content/photography/imgs/pika3.jpeg"},
-				"pika4": {"path": "./assets/content/photography/imgs/pika4.jpeg"}
+				"pika1": {"path": "./assets/content/photography/imgs/pika1.jpg"},
+				"pika2": {"path": "./assets/content/photography/imgs/pika2.jpg"},
+				"pika3": {"path": "./assets/content/photography/imgs/pika3.jpg"},
+				"pika4": {"path": "./assets/content/photography/imgs/pika4.jpg"}
 			},
 		"markdown": {"id": {"value": "<markdown>"}}
 	},
@@ -51,7 +51,7 @@
 			"imageId": "pika4",
 			"caption": "Picture of pika 4",
 			"description": "Say hi to pika 4",
-			"orientation": "landscape",
+			"orientation": "portrait",
 			"settings": "from google",
 			"date": "4",
 			"tags": ["pika", "endagered", "cute"]
