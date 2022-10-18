@@ -86,10 +86,10 @@ function constructTagsHTML(tags, truncate=true, numMaxTags=5) {
     }
     tagsHTML = "";
     maxTags.forEach((tag) => {
-        tagsHTML += `<span class="badge badge-pill badge-light tag">${tag}</span>`;
+        tagsHTML += `<span class="badge bg-light text-dark">${tag}</span>`;
     });
     if (maxTags.length < tags.length) {
-        tagsHTML += `<span class="badge badge-pill badge-light tag tag-ellipses">...</span>`;
+        tagsHTML += `<span class="badge bg-light text-dark tag tag-ellipses">...</span>`;
     }
     return tagsHTML;
 }
