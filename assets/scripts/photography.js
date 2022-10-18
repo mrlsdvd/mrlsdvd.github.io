@@ -1,5 +1,3 @@
-import { getObjectComparator, constructTagsHTML } from './photography.js'
-
 PHOTO_GALLERY_ENTRY_COMPONENT_PATH = "./assets/html/components/photo_gallery_entry.html"
 
 $().ready(function() {
