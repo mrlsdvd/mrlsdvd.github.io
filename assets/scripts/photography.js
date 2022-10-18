@@ -28,6 +28,10 @@ $().ready(function() {
                 imageInfo = data.data.images[photoInfo.imageId];
                 entryHTML = constructPhotoEntryHTML(photoTemplate, photoInfo, imageInfo);
                 prevRow += entryHTML;
+                if (idx == numPhotos - 1) {
+                    prevRow += "</div>";
+                    $("#photo-gallery").append(prevRow);
+                }
                 
             });
         });
