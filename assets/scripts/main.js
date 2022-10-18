@@ -80,9 +80,10 @@ function getObjectComparator(objectKey) {
 }
 
 function constructTagsHTML(tags, truncate=true, numMaxTags=5) {
-    maxTags = tags;
+    console.log(tags);
+    var maxTags = tags;
     if (truncate) {
-        maxTags = maxTags.slice(0, numMaxTags)
+        maxTags = maxTags.slice(0, numMaxTags);
     }
     tagsHTML = "";
     maxTags.forEach((tag) => {
