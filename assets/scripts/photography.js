@@ -15,7 +15,7 @@ $().ready(function() {
             let prevRow = null;
 
             sortedPhotoInfo.forEach((photoInfo, idx) => {
-                console.log(photoInfo)
+                console.log(idx + " " + photoInfo)
                 if (idx % numCols == 0 || idx == numPhotos-1) {
                     if (prevRow != null) {
                         prevRow += "</div>";
