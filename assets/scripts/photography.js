@@ -15,7 +15,7 @@ $().ready(function() {
             imageInfo = data.data.images[photoInfo.imageId];
             console.log(imageInfo)
             entryHTML = constructPhotoEntryHTML(photoInfo, imageInfo);
-            $("div.gallery.photo-gallery").html(entryHTML);
+            $("#photo-gallery").append(entryHTML);
         });
     });
 
