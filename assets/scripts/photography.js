@@ -21,7 +21,7 @@ $().ready(function() {
         sortedPhotoInfo.forEach((photoInfo) => {
             imageInfo = data.data.images[photoInfo.imageId];
             console.log(imageInfo)
-            entryHTML = constructPhotoEntryHTML(photoInfo, imageInfo);
+            entryHTML = constructPhotoEntryHTML(photoTemplate, photoInfo, imageInfo);
             console.log(entryHTML);
             $("#photo-gallery").append(entryHTML);
         });
