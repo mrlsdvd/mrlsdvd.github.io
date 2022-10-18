@@ -6,24 +6,20 @@ $().ready(function() {
     */
     console.log("Photography page loaded!");
     // Load photo entry HTML template:
-    var photoTemplate = null;
-    $.get(PHOTO_GALLERY_ENTRY_COMPONENT_PATH, function(data) {
-        photoTemplate = photoTemplate
-    });
-    console.log(photoTemplate)
-
-    // Load config data
-    $.getJSON("/config.json", function(data) {
-        console.log(data.photography);
-        // Sort objects by date
-        let sortedPhotoInfo = data.photography.photos.sort(getObjectComparator('date'));
-        console.log(sortedPhotoInfo);
-        sortedPhotoInfo.forEach((photoInfo) => {
-            imageInfo = data.data.images[photoInfo.imageId];
-            console.log(imageInfo)
-            entryHTML = constructPhotoEntryHTML(photoTemplate, photoInfo, imageInfo);
-            console.log(entryHTML);
-            $("#photo-gallery").append(entryHTML);
+    $.get(PHOTO_GALLERY_ENTRY_COMPONENT_PATH, function(photoTemplate) {
+        // Load config data
+        $.getJSON("/config.json", function(data) {
+            console.log(data.photography);
+            // Sort objects by date
+            let sortedPhotoInfo = data.photography.photos.sort(getObjectComparator('date'));
+            console.log(sortedPhotoInfo);
+            sortedPhotoInfo.forEach((photoInfo) => {
+                imageInfo = data.data.images[photoInfo.imageId];
+                console.log(imageInfo)
+                entryHTML = constructPhotoEntryHTML(photoTemplate, photoInfo, imageInfo);
+                console.log(entryHTML);
+                $("#photo-gallery").append(entryHTML);
+            });
         });
     });
 
