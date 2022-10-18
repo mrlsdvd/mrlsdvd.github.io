@@ -36,7 +36,7 @@ function constructPhotoEntryHTML(photoInfo, imageInfo) {
     };
     // Load HTML template
     var photoEntry = null;
-    $.get('PHOTO_GALLERY_ENTRY_COMPONENT_PATH', function(photoTemplate) {
+    $.get(PHOTO_GALLERY_ENTRY_COMPONENT_PATH, function(photoTemplate) {
         photoEntry = photoTemplate.format(templateEntries);
     });
     console.log(photoEntry);
