@@ -4,10 +4,11 @@
 
 .gallery-caption-wrapper {
 	text-align: center;
+	margin: 1% 0 -3% 0;
 }
 
 .gallery-title {
-	margin: 1% 0 -3% 0;
 	font-style: italic;
 	font-family: courier;
+	opacity: 0.30;
 }
