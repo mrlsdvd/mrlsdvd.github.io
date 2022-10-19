@@ -17,7 +17,6 @@ $().ready(function() {
             let prevRow = null;
 
             sortedPhotoInfo.forEach((photoInfo, idx) => {
-                console.log(idx + " " + photoInfo)
                 let colIdx = idx % NUM_COLS;
                 imageInfo = data.data.images[photoInfo.imageId];
                 entryHTML = constructPhotoEntryHTML(photoTemplate, photoInfo, imageInfo);
