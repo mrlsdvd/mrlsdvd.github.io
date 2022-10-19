@@ -1,18 +1,18 @@
-<div class="photo-gallery-entry-wrapper {orientation}" id="{imageId}">
-<!-- Gallery Photo Entry-->    
-    <a data-bs-toggle="modal" data-bs-target="#photo-gallery-modal-{imageId}">
-        <div class="photo-gallery-entry">
+<div class="gallery-entry-wrapper {orientation}" id="{imageId}">
+<!-- Gallery Entry-->    
+    <a data-bs-toggle="modal" data-bs-target="#gallery-modal-{imageId}">
+        <div class="gallery-entry">
             <img
               src="{imagePath}"
               class="w-100 shadow-1-strong rounded mb-4"
               alt="{caption}"
             />
-            <div class="photo-gallery-caption-settings-wrapper">
-                <p class="photo-gallery-title">{title}</p>
-                <!-- <p class="photo-gallery-caption">{caption}</p> -->
-                <!-- <p class="photo-gallery-settings">{settings}</p> -->
+            <div class="gallery-caption-wrapper">
+                <p class="gallery-title">{title}</p>
+                <!-- <p class="gallery-caption">{caption}</p> -->
+                <!-- <p class="gallery-settings">{settings}</p> -->
             </div>
-            <!-- <div class="photo-gallery-tags-wrapper">
+            <!-- <div class="gallery-tags-wrapper">
                 {photoGalleryTags}
             </div> -->
         </div>
@@ -20,7 +20,7 @@
 <!-- Gallery Photo Entry-->
 
 <!-- Gallery Photo Modal -->
-    <div class="modal fade" id="photo-gallery-modal-{imageId}" tabindex="-1" role="dialog" aria-labelledby="galleryPhotoModal" aria-hidden="true">
+    <div class="modal fade" id="gallery-modal-{imageId}" tabindex="-1" role="dialog" aria-labelledby="galleryModal" aria-hidden="true">
       <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -30,25 +30,25 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="photo-modal">
+                <div class="gallery-modal">
                     <img
                     src="{imagePath}"
                     class="w-100 shadow-1-strong rounded mb-4"
                     alt="{caption}"
                     />
                 </div>
-                <div class="photo-modal-caption-settings-wrapper">
-                    <p class="photo-modal-caption">{caption}</p>
-                    <p class="photo-modal-settings">{settings}</p>
+                <div class="modal-caption-wrapper">
+                    <p class="modal-caption">{caption}</p>
+                    <p class="modal-settings">{settings}</p>
                 </div>
           </div>
           <div class="modal-footer">
-            <div class="photo-modal-tags-wrapper">
+            <div class="modal-tags-wrapper">
                 {photoModalTags}
             </div>
             <br>
-            <div class="photo-modal-description-wrapper">
-                <p class="photo-modal-description">{description}</p>
+            <div class="modal-description-wrapper">
+                <p class="modal-description">{description}</p>
             </div>
           </div>
         </div>
