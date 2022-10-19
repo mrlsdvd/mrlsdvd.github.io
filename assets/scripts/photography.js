@@ -1,4 +1,6 @@
 PHOTO_GALLERY_ENTRY_COMPONENT_PATH = "./assets/html/components/photo_gallery_entry.html"
+NUM_COLS = 3
+
 
 $().ready(function() {
    /**
@@ -10,28 +12,16 @@ $().ready(function() {
         $.getJSON("/config.json", function(data) {
             // Sort objects by date
             let sortedPhotoInfo = data.photography.photos.sort(getObjectComparator('date'));
-            let numCols = data.photography.numCols;
+            let numCols = NUM_COLS
             let numPhotos = sortedPhotoInfo.length;
             let prevRow = null;
 
             sortedPhotoInfo.forEach((photoInfo, idx) => {
                 console.log(idx + " " + photoInfo)
-                if (idx % (numCols+1) == 0) {
-                    if (prevRow != null) {
-                        prevRow += "</div>";
-                        $("#photo-gallery").append(prevRow);
-
-                    }
-                    prevRow = `<div class="row">`;
-
-                }
+                let colIdx = idx % NUM_COLS;
                 imageInfo = data.data.images[photoInfo.imageId];
                 entryHTML = constructPhotoEntryHTML(photoTemplate, photoInfo, imageInfo);
-                prevRow += entryHTML;
-                if (idx == numPhotos - 1) {
-                    prevRow += "</div>";
-                    $("#photo-gallery").append(prevRow);
-                }
+                $("#photo-gallery #gallery-col-${colIdx}").append(entryHTML);
                 
             });
         });
