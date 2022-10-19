@@ -21,7 +21,7 @@ $().ready(function() {
                 let colIdx = idx % NUM_COLS;
                 imageInfo = data.data.images[photoInfo.imageId];
                 entryHTML = constructPhotoEntryHTML(photoTemplate, photoInfo, imageInfo);
-                $("#photo-gallery#gallery-col-"+colIdx).append(entryHTML);
+                $("#photo-gallery #gallery-col-"+colIdx).append(entryHTML);
                 
             });
         });
