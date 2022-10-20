@@ -7,7 +7,11 @@
 				"pika3": {"path": "./assets/content/photography/imgs/pika3.jpg"},
 				"pika4": {"path": "./assets/content/photography/imgs/pika4.jpg"}
 			},
-		"markdown": {"id": {"path": "./assets/content/markdown/dummy.md"}}
+		"markdown": 
+			{
+				"id": {"path": "./assets/content/markdown/dummy.md"},
+				"id2": {"path": "./assets/content/markdown/dummy2.md"}
+			}
 	},
 	"programming": {"posts": [{}]},
 	"outdoors": {
@@ -17,6 +21,12 @@
 			"markdownId": "id",
 			"date": "1",
 			"tags": ["test", "new"]
+		},{
+			"id": "dummy2",
+			"title": "dummy post 2",
+			"markdownId": "id2",
+			"date": "2",
+			"tags": ["test", "newer"]
 		}]
 	},
 	"art": {"works": [{}]},

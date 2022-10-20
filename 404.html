@@ -10,20 +10,24 @@
   <body>
     <main>
       <h1>Hello World!</h1>
-      <nav class="nav nav-tabs">
-        <a class="nav-link active" id="nav-about">Home</a>
-        <a class="nav-link" id="nav-programming">Programming</a>
-        <a class="nav-link" id="nav-outdoors">Outdoors</a>
-        <a class="nav-link" id="nav-art">Art</a>
-        <a class="nav-link" id="nav-photography">Photography</a>
-        <a class="nav-link" id="nav-travel">Travel</a>
-        <a class="nav-link" id="nav-albums">Albums</a>
-      </nav>
-      <form id="search-form">
-          <input id="search-bar" placeholder="Search..." type="text" />
-      </form>
-      <div id="main-content">
+      <div>
+        <nav class="nav nav-tabs">
+          <a class="nav-link active" id="nav-about">Home</a>
+          <a class="nav-link" id="nav-programming">Programming</a>
+          <a class="nav-link" id="nav-outdoors">Outdoors</a>
+          <a class="nav-link" id="nav-art">Art</a>
+          <a class="nav-link" id="nav-photography">Photography</a>
+          <a class="nav-link" id="nav-travel">Travel</a>
+          <a class="nav-link" id="nav-albums">Albums</a>
+
+          <div class="justify-content-end">
+            <form id="search-form">
+                <input id="search-bar" placeholder="Search" class="form-control" type="search" />
+            </form>
+          </div>
+        </nav>
       </div>
+      <div id="main-content">
     </main>
   </body>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
