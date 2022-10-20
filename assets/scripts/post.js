@@ -7,7 +7,7 @@ $().ready(function() {
     */
     let pageIdentifier = window.location.href.split(MAIN_URL)[1].split('#');
     let navName = pageIdentifier[0].toLowerCase();
-    let entryId = pageIdentifier[1];
+    let postId = pageIdentifier[1];
     let pageBaseURL = MAIN_URL+navName
 
     // Load config data
@@ -32,8 +32,8 @@ $().ready(function() {
         });
         //Show most recent post
         let recentPostId = sortedEntryInfo[0].id;
-        if (entryId != undefined) { 
-            focusOnEntry(entryId, navName);
+        if (postId != undefined) { 
+            focusOnPost(postId, navName);
         } else { 
             focusOnPost(recentPostId, navName);
         }
@@ -43,7 +43,7 @@ $().ready(function() {
 });
 
 
-function focusOnPost(postId) {
+function focusOnPost(postId, navName) {
     $.getJSON("/config.json", function(data) {
         let sortedEntryInfo = getEntries(data, navName, true, "date", true);
         sortedEntryInfo.forEach((postInfo, idx) => {
