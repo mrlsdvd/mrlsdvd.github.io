@@ -32,6 +32,7 @@ function focusOnPost(postInfo, data) {
     // Open post modal
 
     let markdownInfo = data.data.markdown[postInfo.markdownId];
+    let postId = postInfo.id;
     // Load  entry HTML template:
     $.get(OUTDOORS_LOG_ENTRY_COMPONENT_PATH, function(logTemplate) {
         entryHTML = constructOutdoorEntryHTML(logTemplate, postInfo, markdownInfo);
