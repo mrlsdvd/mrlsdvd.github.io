@@ -59,9 +59,13 @@ String.prototype.format = function() {
   }.bind(this));
 };
 
-function setMainContent(navName) {
+function setMainContent(navName, identifier=null) {
     $('#main-content').load('/assets/html/' + navName +'.html');
-    window.history.replaceState(null, null, MAIN_URL+navName)
+    let pageIdentifier = MAIN_URL+navName
+    if (identifier != null) {
+        pageIdentifier = pageIdentifier + +"#${identifier}";
+    }
+    window.history.replaceState(null, null, pageIdentifier)
 }
 
 function searchContent(query, navName) {
