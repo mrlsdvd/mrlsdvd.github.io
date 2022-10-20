@@ -35,7 +35,10 @@ function focusOnPost(postInfo, data) {
     var postId = postInfo.id;
     // Load  entry HTML template:
     $.get(OUTDOORS_LOG_ENTRY_COMPONENT_PATH, function(logTemplate) {
+        console.log(markdownInfo);
+        console.log(postId);
         entryHTML = constructOutdoorEntryHTML(logTemplate, postInfo, markdownInfo);
+        console.log(entryHTML);
         $("#outdoors-entry-col").html(entryHTML);
         // Highlight post in outline
         $(".log-outline-item").removeClass('active');
