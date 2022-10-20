@@ -19,7 +19,7 @@ $().ready(function() {
                 $("#outdoors-outline").append(`<a class="log-outline-item" id="log-outline-item-${postId}">${postTitle}</a>`)
             });
             //Show most recent post
-            let recentPostId = sortedPhotoInfo[0].postId;
+            let recentPostId = sortedEntryInfo[0].postId;
             focusOnPost(recentPostId);
 
         });
