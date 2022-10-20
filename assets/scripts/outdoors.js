@@ -31,8 +31,8 @@ function focusOnPost(postInfo, data) {
     // Set URL to mirror post
     // Open post modal
 
-    let markdownInfo = data.data.markdown[postInfo.markdownId];
-    let postId = postInfo.id;
+    var markdownInfo = data.data.markdown[postInfo.markdownId];
+    var postId = postInfo.id;
     // Load  entry HTML template:
     $.get(OUTDOORS_LOG_ENTRY_COMPONENT_PATH, function(logTemplate) {
         entryHTML = constructOutdoorEntryHTML(logTemplate, postInfo, markdownInfo);
