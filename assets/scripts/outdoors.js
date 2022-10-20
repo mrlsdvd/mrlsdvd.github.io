@@ -37,6 +37,7 @@ function focusOnPost(postId) {
         sortedEntryInfo.forEach((postInfo, idx) => {
             if (postInfo.id == postId) {
                 postFound = true
+                console.log(postFound)
                 let markdownInfo = data.data.markdown[postInfo.markdownId];
                 let postTitle = postInfo.title;
                 let postId = postInfo.id;
@@ -52,9 +53,6 @@ function focusOnPost(postId) {
                     $("#log-outline-item-"+postId).addClass('active');
                 });
             }
-            if (!postFound) { alert("Id not found") }
-            let recentPostId = sortedEntryInfo[0].id;
-            focusOnPost(recentPostId);
         });
     });
     
