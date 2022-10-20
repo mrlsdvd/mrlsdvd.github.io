@@ -14,7 +14,7 @@
 			}
 	},
 	"programming": {
-		"posts": "posts": [{
+		"posts": [{
 			"id": "dummy",
 			"title": "dummy post",
 			"markdownId": "id",
@@ -131,7 +131,7 @@
 			"tags": ["pika", "endagered", "cute"]
 		}]},
 	"travel": {
-		"posts": "posts": [{
+		"posts": [{
 			"id": "dummy",
 			"title": "dummy post",
 			"markdownId": "id",
