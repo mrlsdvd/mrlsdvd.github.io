@@ -1,4 +1,4 @@
-OUTDOORS_LOG_ENTRY_COMPONENT_PATH = "./assets/html/components/outdoors_log_entry.html"
+OUTDOORS_LOG_ENTRY_COMPONENT_PATH = "./assets/html/components/log_entry.html"
 
 
 $().ready(function() {

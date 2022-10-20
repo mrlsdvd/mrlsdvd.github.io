@@ -48,5 +48,6 @@ a:hover {
 }
 
 .outline-col .log-entry-col {
-	overflow-y: scroll;
+	overflow: scroll;
+	height: 100vh;
 }
