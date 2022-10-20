@@ -19,13 +19,13 @@ $().ready(function() {
         });
         //Show most recent post
         let recentPostInfo = sortedEntryInfo[0];
-        focusOnPost(recentPostInfo);
+        focusOnPost(recentPostInfo, data);
 
     });
 });
 
 
-function focusOnPost(postInfo) {
+function focusOnPost(postInfo, data) {
     // Validate that postID exists
     // TODO: When adding pagination, entry will not exist yet, so will need to load
     // Set URL to mirror post
