@@ -37,8 +37,8 @@ $().ready(function() {
 
 });
 
-function focusOnPhoto(photoID) {
-    // Validate that photoID exists
+function focusOnPhoto(photoId) {
+    // Validate that photoId exists
     // TODO: When adding pagination, entry will not exist yet, so will need to load
     // Set URL to mirror photo
     // Open photo modal
