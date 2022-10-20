@@ -88,7 +88,7 @@ function constructTagsHTML(tags, truncate=true, numMaxTags=5) {
     }
     tagsHTML = "";
     maxTags.forEach((tag) => {
-        tagsHTML += `<span class="badge bg-light text-dark">${tag}</span>`;
+        tagsHTML += `<span class="badge bg-light text-dark">${tag}</span>&nbsp;`;
     });
     if (maxTags.length < tags.length) {
         tagsHTML += `<span class="badge bg-light text-dark tag tag-ellipses">...</span>`;
