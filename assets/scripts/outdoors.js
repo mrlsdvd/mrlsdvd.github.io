@@ -9,7 +9,7 @@ $().ready(function() {
     // Load config data
     $.getJSON("/config.json", function(data) {
         // Sort objects by date
-        let sortedEntryInfo = data.outdoors.posts.sort(getObjectComparator('date'), true);
+        let sortedEntryInfo = data.outdoors.posts.sort(getObjectComparator('date', false));
 
         sortedEntryInfo.forEach((postInfo, idx) => {
             let markdownInfo = data.data.markdown[postInfo.markdownId];
