@@ -64,7 +64,7 @@ function setMainContent(navName, identifier=null) {
     $('#main-content').load('/assets/html/' + navName +'.html');
     let pageIdentifier = MAIN_URL+navName
     if (identifier != null) {
-        pageIdentifier = pageIdentifier + +"#${identifier}";
+        pageIdentifier = pageIdentifier +"#${identifier}";
     }
     window.history.replaceState(null, null, pageIdentifier)
 }
