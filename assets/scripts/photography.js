@@ -32,9 +32,10 @@ $().ready(function() {
     let navName = pageIdentifier[0];
     let photoID = pageIdentifier[1];
     let pageBaseURL = MAIN_URL+navName
+    
     // Add listeners to each modal -- when the modal shows, update the url path
-
     $(".modal").on("shown.bs.modal", function() {
+        console.log("modal shown")
         let identifier = $(this).attr("id").split('-').pop();
         if (identifier != null) {
             pageURL = pageBaseURL + "#" + identifier;
@@ -47,6 +48,7 @@ $().ready(function() {
     }
     // When the modal hides, remove from the url path
     $(".modal").on("hidden.bs.modal", function() {
+        console.log("modal hidden")
         window.history.replaceState(null, null, pageBaseURL)
     });
 
