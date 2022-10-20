@@ -8,7 +8,7 @@ $().ready(function() {
     let pageIdentifier = window.location.href.split(MAIN_URL)[1].split('#');
     let pageName = pageIdentifier[0].toLowerCase()
     if (!SUPPORTED_PAGES.includes(pageName)) {pageName = 'about'}
-    setMainContent(pageName);
+    setMainContent(pageName, pageIdentifier[1]);
     // Make that navigation tab active
     $(".nav-link").removeClass('active');
     $("#nav-"+pageName).addClass('active')
