@@ -13,10 +13,6 @@ $().ready(function() {
     if (photoID != undefined) {
         focusOnPhoto(photoID);
     }
-    setMainContent(pageName);
-    // Make that navigation tab active
-    $(".nav-link").removeClass('active');
-    $("#nav-"+pageName).addClass('active')
 
 
     // Load photo entry HTML template:
