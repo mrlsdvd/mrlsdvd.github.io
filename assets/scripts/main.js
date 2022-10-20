@@ -5,7 +5,7 @@ $().ready(function() {
    /**
     * Begin with desired content as default
     */
-    var pageName = window.location.href.split(MAIN_URL)[1].toLowerCase()
+    let pageName = window.location.href.split(MAIN_URL)[1].toLowerCase()
     if (!SUPPORTED_PAGES.includes(pageName)) {pageName = 'about'}
     setMainContent(pageName);
     // Make that navigation tab active
@@ -67,12 +67,14 @@ function searchContent(query, navName) {
     console.log("Searching {0} under page {1}".format(query, navName))
 }
 
-function getObjectComparator(objectKey) {
+function getObjectComparator(objectKey, desc=false) {
     return function(a, b) {
         if ( a[objectKey] < b[objectKey] ){
+            if (desc) {return 1};
             return -1;
           }
           if ( a[objectKey] > b[objectKey] ){
+            if (desc) {return -1};
             return 1;
           }
           return 0;

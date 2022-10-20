@@ -1,4 +1,4 @@
-.nav-link:hover {
+.a:hover {
 	cursor: pointer;
 }
 
@@ -20,4 +20,8 @@
 	font-family: courier;
 	opacity: 0.80;
 	margin: 0% 0% 1% 0%;
+}
+
+.log-entry {
+	border-left: 1px solid #3333331c;
 }
