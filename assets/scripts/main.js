@@ -5,7 +5,8 @@ $().ready(function() {
    /**
     * Begin with desired content as default
     */
-    let pageName = window.location.href.split(MAIN_URL)[1].toLowerCase()
+    let pageIdentifier = window.location.href.split(MAIN_URL)[1].split('#');
+    let pageName = pageIdentifier[0].toLowerCase()
     if (!SUPPORTED_PAGES.includes(pageName)) {pageName = 'about'}
     setMainContent(pageName);
     // Make that navigation tab active
