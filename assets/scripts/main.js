@@ -6,6 +6,7 @@ $().ready(function() {
     * Begin with desired content as default
     */
     let pageIdentifier = window.location.href.split(MAIN_URL)[1].split('#');
+    console.log(pageIdentifier);
     let pageName = pageIdentifier[0].toLowerCase()
     if (!SUPPORTED_PAGES.includes(pageName)) {pageName = 'about'}
     setMainContent(pageName, pageIdentifier[1]);
