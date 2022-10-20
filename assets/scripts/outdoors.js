@@ -24,7 +24,7 @@ $().ready(function() {
         });
         //Show most recent post
         let recentPostId = sortedEntryInfo[0].id;
-        focusOnPost(recentPosId);
+        focusOnPost(recentPostId);
 
     });
 });
@@ -54,7 +54,7 @@ function focusOnPost(postId) {
             }
             if (!postFound) { alert("Id not found") }
             let recentPostId = sortedEntryInfo[0].id;
-            focusOnPost(recentPosId);
+            focusOnPost(recentPostId);
         });
     });
     
