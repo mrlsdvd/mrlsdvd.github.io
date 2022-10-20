@@ -43,8 +43,12 @@
                         <span class="modal-settings">{settings}</span>
                     </p>
                 </div>
-                <div class="modal-description" markdown="1">
-                    <span class="note">{description}</span>
+                <div class="modal-description">
+                    <zero-md>
+                      <script type="text/markdown">
+                        {description}
+                      </script>
+                    </zero-md>
                 </div>
           </div>
           <div class="modal-footer">
