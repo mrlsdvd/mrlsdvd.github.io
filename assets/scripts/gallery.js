@@ -43,6 +43,7 @@ $().ready(function() {
     if (entryId != undefined) {
         focusOnEntry(entryId, navName);
     }
+    
     // When the modal hides, remove from the url path
     $(document).on("hidden.bs.modal", ".modal", function() {
         console.log("modal hidden")
@@ -71,13 +72,13 @@ function getEntries(data, navName, sorted=true, sortBy="date", desc=true) {
     let entries = null;
     switch(navName) {
         case "art":
-            entries = data.art.works
+            entries = data.art.works;
             break;
         default:
-            entries = data.photography.photos
+            entries = data.photography.photos;
     }
     if (sorted) {return entries.sort(getObjectComparator(sortBy, desc));}
-    return entries
+    return entries;
 }
 
 function constructEntryHTML(template, entryInfo, imageInfo) {
@@ -89,7 +90,7 @@ function constructEntryHTML(template, entryInfo, imageInfo) {
         "orientation": entryInfo.orientation,
         "title": entryInfo.title,
         "caption": entryInfo.caption,
-        "options": entryInfo.settings,
+        "options": entryInfo.options,
         "description": entryInfo.description,
         "galleryTags": truncatedTagsHTML,
         "modalTags": fullTagsHTML
