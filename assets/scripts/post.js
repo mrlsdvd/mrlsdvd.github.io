@@ -54,7 +54,6 @@ function focusOnPost(postId, navName) {
                 // Load  entry HTML template:
                 $.get(LOG_ENTRY_COMPONENT_PATH, function(logTemplate) {
                     entryHTML = constructPostHTML(logTemplate, postInfo, markdownInfo);
-                    console.log(entryHTML);
                     $(".log-entry-col").html(entryHTML);
                     // Highlight post in outline
                     $(".log-outline-item").removeClass('active');

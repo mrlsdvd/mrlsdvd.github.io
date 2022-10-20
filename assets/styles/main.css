@@ -15,16 +15,16 @@ a:hover {
 	text-align: center;
 }
 
-.modal-caption-settings {
+.modal-caption-options {
 	font-style: italic;
 	font-family: courier;
 	opacity: 0.80;
 }
-.modal-caption-settings-separator {
+.modal-caption-options-separator {
 	font-style: normal;
 }
 
-.modal-settings {
+.modal-options {
 	opacity: 0.30;
 }
 
