@@ -42,13 +42,13 @@ function focusOnPhoto(photoId) {
     // Set URL to mirror photo
     // Open photo modal
     $.getJSON("/config.json", function(data) {
-        let sortedEntryInfo = data.outdoors.posts.sort(getObjectComparator('date', true));
+        let sortedEntryInfo = data.photography.photos.sort(getObjectComparator('date', true));
         var photoFound = false;
         sortedEntryInfo.forEach((photoInfo, idx) => {
             if (photoInfo.id == photoId) {
                 photoFound = true
                 console.log(photoFound)
-                let imageInfo = data.data.markdown[photoInfo.imageInfo];
+                let imageInfo = data.data.images[photoInfo.imageInfo];
                 let photoTitle = photoInfo.title;
                 let photoId = photoInfo.id;
                 // Load  entry HTML template:
