@@ -7,7 +7,7 @@
 				"pika3": {"path": "./assets/content/photography/imgs/pika3.jpg"},
 				"pika4": {"path": "./assets/content/photography/imgs/pika4.jpg"}
 			},
-		"markdown": {"id": {"path": "./assets/conent/markdown/dummy.md>"}}
+		"markdown": {"id": {"path": "./assets/content/markdown/dummy.md>"}}
 	},
 	"programming": {"posts": [{}]},
 	"outdoors": {
