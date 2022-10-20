@@ -39,7 +39,7 @@ function focusOnPost(postInfo, data) {
         $("#outdoors-entry-col").html(entryHTML);
         // Highlight post in outline
         $(".log-outline-item").removeClass('active');
-        $("#log-outline-item-${postId}").addClass('active');
+        $("#log-outline-item-${postInfo.id}").addClass('active');
     });
 }
 
