@@ -48,7 +48,7 @@ function focusOnPhoto(photoId) {
             if (photoInfo.id == photoId) {
                 photoFound = true
                 console.log(photoFound)
-                let imageInfo = data.data.images[photoInfo.imageInfo];
+                let imageInfo = data.data.photography.images[photoInfo.imageInfo];
                 let photoTitle = photoInfo.title;
                 let photoId = photoInfo.id;
                 // Load  entry HTML template:
