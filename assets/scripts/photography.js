@@ -62,7 +62,7 @@ function focusOnPhoto(photoID) {
                     console.log(photoId);
                     entryHTML = constructPhotoEntryHTML(photoTemplate, photoInfo, imageInfo);
                     console.log(entryHTML);
-                    $.parseHTML(entryHTML).("#gallery-modal-"+imageInfo.imageId).modal("toggle");
+                    $.parseHTML(entryHTML).filter("#gallery-modal-"+imageInfo.imageId).modal("toggle");
                 });
             }
         });
