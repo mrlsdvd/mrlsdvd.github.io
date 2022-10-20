@@ -7,6 +7,23 @@
 	margin: 1% 0 -3% 0;
 }
 
+.modal-caption-wrapper {
+	text-align: center;
+}
+
+.modal-caption-settings {
+	font-style: italic;
+	font-family: courier;
+	opacity: 0.80;
+}
+.modal-caption-settings-separator {
+	font-style: normal;
+}
+
+.modal-settings {
+	opacity: 0.30;
+}
+
 .image-horizontal {
 	margin: 1.5% 0 0 0;
 	color: inherit;
