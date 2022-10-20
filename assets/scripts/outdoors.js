@@ -42,7 +42,7 @@ function focusOnPost(postInfo, data) {
         $("#outdoors-entry-col").html(entryHTML);
         // Highlight post in outline
         $(".log-outline-item").removeClass('active');
-        $("#log-outline-item-${postInfo.id}").addClass('active');
+        $("#log-outline-item-${postId}").addClass('active');
     });
 }
 
@@ -54,7 +54,7 @@ function getPost(postId) {
 function constructOutdoorEntryHTML(logTemplate, postInfo, markdownInfo) {
     fullTagsHTML = constructTagsHTML(postInfo.tags, false);
     templateEntries = {
-        "postId": postInfo.postId,
+        "postId": postInfo.id,
         "entryMarkdownPath": markdownInfo.path,
         "title": postInfo.title,
         "postDate": postInfo.date,
