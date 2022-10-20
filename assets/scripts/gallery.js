@@ -1,6 +1,5 @@
 GALLERY_ENTRY_COMPONENT_PATH = "./assets/html/components/gallery_entry.html"
 NUM_COLS = 3
-SUPPORTED_PAGES = ['about', 'programming', 'outdoors', 'art', 'photography', 'travel', 'albums']
 
 
 $().ready(function() {
@@ -32,22 +31,20 @@ $().ready(function() {
     
     // Add listeners to each modal -- when the modal shows, update the url path
     $(document).on("shown.bs.modal", ".modal", function() {
-        console.log("modal shown")
         let identifier = $(this).attr("id").split('-').pop();
         if (identifier != null) {
             pageURL = pageBaseURL + "#" + identifier;
         }
-        window.history.replaceState(null, null, pageURL)
+        window.history.replaceState(null, null, pageURL);
     });
 
     if (entryId != undefined) {
         focusOnEntry(entryId, navName);
     }
-    
+
     // When the modal hides, remove from the url path
     $(document).on("hidden.bs.modal", ".modal", function() {
-        console.log("modal hidden")
-        window.history.replaceState(null, null, pageBaseURL)
+        window.history.replaceState(null, null, pageBaseURL);
     });
 
 });
