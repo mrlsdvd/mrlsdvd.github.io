@@ -7,13 +7,6 @@ $().ready(function() {
    /**
     * Begin with desired content as default
     */
-    let pageIdentifier = window.location.href.split(MAIN_URL)[1].split('#');
-    let photoID = pageIdentifier[1];
-
-    if (photoID != undefined) {
-        focusOnPhoto(photoID);
-    }
-
 
     // Load photo entry HTML template:
     $.get(PHOTO_GALLERY_ENTRY_COMPONENT_PATH, function(photoTemplate) {
@@ -34,6 +27,12 @@ $().ready(function() {
             });
         });
     });
+    let pageIdentifier = window.location.href.split(MAIN_URL)[1].split('#');
+    let photoID = pageIdentifier[1];
+
+    if (photoID != undefined) {
+        focusOnPhoto(photoID);
+    }
 
 });
 
