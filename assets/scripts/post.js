@@ -55,7 +55,7 @@ function focusOnPost(postId, navName) {
                 $.get(LOG_ENTRY_COMPONENT_PATH, function(logTemplate) {
                     entryHTML = constructPostHTML(logTemplate, postInfo, markdownInfo);
                     console.log(entryHTML);
-                    $("#.entry-col").html(entryHTML);
+                    $(".entry-col").html(entryHTML);
                     // Highlight post in outline
                     $(".log-outline-item").removeClass('active');
                     $("#log-outline-item-"+postId).addClass('active');
