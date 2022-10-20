@@ -35,7 +35,7 @@
 		"portraitSize": [],
 		"landscapeSize": [],
 		"photos": [{
-			"id": "pika1-photo",
+			"id": "pika1photo",
 			"title": "This is pika 1",
 			"imageId": "pika1",
 			"caption": "Picture of pika 1",
@@ -45,7 +45,7 @@
 			"date": "1",
 			"tags": ["pika", "endagered", "cute"]
 		},{
-			"id": "pika2-photo",
+			"id": "pika2photo",
 			"title": "This is pika 2",
 			"imageId": "pika2",
 			"caption": "Picture of pika 2",
@@ -55,7 +55,7 @@
 			"date": "2",
 			"tags": ["pika", "endagered", "cute"]
 		},{
-			"id": "pika3-photo",
+			"id": "pika3photo",
 			"title": "This is pika 3",
 			"imageId": "pika3",
 			"caption": "Picture of pika 3",
@@ -65,7 +65,7 @@
 			"date": "3",
 			"tags": ["pika", "endagered", "cute"]
 		},{
-			"id": "pika4-photo",
+			"id": "pika4photo",
 			"title": "This is pika 4",
 			"imageId": "pika4",
 			"caption": "Picture of pika 4",

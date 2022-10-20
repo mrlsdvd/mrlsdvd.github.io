@@ -34,7 +34,7 @@ $().ready(function() {
     let pageBaseURL = MAIN_URL+navName
     
     // Add listeners to each modal -- when the modal shows, update the url path
-    $(".modal").on("shown.bs.modal", function() {
+    $(document).on("shown.bs.modal", ".modal", function() {
         console.log("modal shown")
         let identifier = $(this).attr("id").split('-').pop();
         if (identifier != null) {
@@ -47,7 +47,7 @@ $().ready(function() {
         focusOnPhoto(photoID);
     }
     // When the modal hides, remove from the url path
-    $(".modal").on("hidden.bs.modal", function() {
+    $(document).on("hidden.bs.modal", ".modal", function() {
         console.log("modal hidden")
         window.history.replaceState(null, null, pageBaseURL)
     });
