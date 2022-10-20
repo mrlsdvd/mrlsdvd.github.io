@@ -37,17 +37,19 @@
                     />
                 </div>
                 <div class="modal-caption-wrapper">
-                    <p class="modal-caption">{caption}</p>
-                    <p class="modal-settings">{settings}</p>
+                    <p class="modal-caption-settings">
+                        <span class="modal-caption">{caption}</span>
+                        <span class="modal-caption-settings-separator">|</span>
+                        <span class="modal-settings">{settings}</span>
+                    </p>
                 </div>
+                <div class="modal-description-wrapper">
+                <p class="modal-description">{description}</p>
+            </div>
           </div>
           <div class="modal-footer">
             <div class="modal-tags-wrapper">
                 {photoModalTags}
-            </div>
-            <br>
-            <div class="modal-description-wrapper">
-                <p class="modal-description">{description}</p>
             </div>
           </div>
         </div>
