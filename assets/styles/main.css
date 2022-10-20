@@ -46,3 +46,7 @@ a:hover {
 .log-entry {
 	border-left: 1px solid #3333331c;
 }
+
+.outline-col .log-entry-col {
+	overflow-y: scroll;
+}
