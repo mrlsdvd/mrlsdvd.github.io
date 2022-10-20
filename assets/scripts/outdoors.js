@@ -9,7 +9,7 @@ $().ready(function() {
     // Load config data
     $.getJSON("/config.json", function(data) {
         // Sort objects by date
-        let sortedEntryInfo = data.outdoors.posts.sort(getObjectComparator('date', false));
+        let sortedEntryInfo = data.outdoors.posts.sort(getObjectComparator('date', true));
 
         sortedEntryInfo.forEach((postInfo, idx) => {
             let markdownInfo = data.data.markdown[postInfo.markdownId];
@@ -42,7 +42,7 @@ function focusOnPost(postInfo, data) {
         $("#outdoors-entry-col").html(entryHTML);
         // Highlight post in outline
         $(".log-outline-item").removeClass('active');
-        $("#log-outline-item-${postId}").addClass('active');
+        $("#log-outline-item-"+postId).addClass('active');
     });
 }
 
