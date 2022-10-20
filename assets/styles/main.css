@@ -2,6 +2,10 @@
 	cursor: pointer;
 }
 
+h2 .top-tittle {
+	font-family: courier;
+}
+
 .gallery-caption-wrapper {
 	text-align: center;
 	margin: 1% 0 -3% 0;
