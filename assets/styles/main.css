@@ -47,7 +47,7 @@ a:hover {
 	border-left: 1px solid #3333331c;
 }
 
-.outline-col .log-entry-col {
+.outline-col, .log-entry-col {
 	overflow: scroll;
 	height: 100vh;
 }
