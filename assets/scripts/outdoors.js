@@ -15,7 +15,7 @@ $().ready(function() {
             let markdownInfo = data.data.markdown[postInfo.markdownId];
             let postTitle = postInfo.title;
             let postId = postInfo.id;
-            $("#outdoors-outline").append(`<a class="log-outline-item" id="log-outline-item-${postId}">${postTitle}</a>`)
+            $("#outdoors-outline").append(`<li class="list-group-item log-outline-item" id="log-outline-item-${postId}"><a>${postTitle}</a></li>`)
         });
         //Show most recent post
         let recentPostInfo = sortedEntryInfo[0];
