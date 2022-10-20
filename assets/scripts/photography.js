@@ -27,12 +27,28 @@ $().ready(function() {
             });
         });
     });
+
     let pageIdentifier = window.location.href.split(MAIN_URL)[1].split('#');
+    let navName = pageIdentifier[0];
     let photoID = pageIdentifier[1];
+    let pageBaseURL = MAIN_URL+navName
+    // Add listeners to each modal -- when the modal shows, update the url path
+
+    $(".modal").on("shown.bs.modal", function() {
+        let identifier = $(this).attr("id").split('-').pop();
+        if (identifier != null) {
+            pageURL = pageBaseURL + "#" + identifier;
+        }
+        window.history.replaceState(null, null, pageURL)
+    });
 
     if (photoID != undefined) {
         focusOnPhoto(photoID);
     }
+    // When the modal hides, remove from the url path
+    $(".modal").on("hidden.bs.modal", function() {
+        window.history.replaceState(null, null, pageBaseURL)
+    });
 
 });
 
@@ -73,7 +89,7 @@ function constructPhotoEntryHTML(photoTemplate, photoInfo, imageInfo) {
     truncatedTagsHTML = constructTagsHTML(photoInfo.tags);
     fullTagsHTML = constructTagsHTML(photoInfo.tags, false);
     templateEntries = {
-        "imageId": photoInfo.imageId,
+        "imageId": photoInfo.id,
         "imagePath": imageInfo.path,
         "orientation": photoInfo.orientation,
         "title": photoInfo.title,
