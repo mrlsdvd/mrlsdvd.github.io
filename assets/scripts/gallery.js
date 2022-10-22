@@ -69,10 +69,10 @@ function getEntries(data, navName, sorted=true, sortBy="date", desc=true) {
     let entries = null;
     switch(navName) {
         case "art":
-            entries = data.art.works;
+            entries = data.art.items;
             break;
         default:
-            entries = data.photography.photos;
+            entries = data.photography.items;
     }
     if (sorted) {return entries.sort(getObjectComparator(sortBy, desc));}
     return entries;
