@@ -2,10 +2,10 @@
 	"data": {
 		"images":
 			{
-				"pika1": {"path": "./assets/content/photography/imgs/pika1.jpg"},
-				"pika2": {"path": "./assets/content/photography/imgs/pika2.jpg"},
-				"pika3": {"path": "./assets/content/photography/imgs/pika3.jpg"},
-				"pika4": {"path": "./assets/content/photography/imgs/pika4.jpg"}
+				"pika1": {"path": "./assets/content/imgs/pika1.jpg"},
+				"pika2": {"path": "./assets/content/imgs/pika2.jpg"},
+				"pika3": {"path": "./assets/content/imgs/pika3.jpg"},
+				"pika4": {"path": "./assets/content/imgs/pika4.jpg"}
 			},
 		"markdown": 
 			{
@@ -44,7 +44,7 @@
 		}]
 	},
 	"art": {
-		"works": [{
+		"items": [{
 			"id": "pika1photo",
 			"title": "This is pika 1",
 			"imageId": "pika1",
@@ -89,7 +89,7 @@
 		"numCols": 3,
 		"portraitSize": [],
 		"landscapeSize": [],
-		"photos": [{
+		"items": [{
 			"id": "pika1photo",
 			"title": "This is pika 1",
 			"imageId": "pika1",
