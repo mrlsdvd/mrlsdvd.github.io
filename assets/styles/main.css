@@ -51,3 +51,7 @@ a:hover {
 	overflow: scroll;
 	height: 100vh;
 }
+
+.gallery-entry img:hover {
+    opacity: .5;
+}
